@@ -2,6 +2,7 @@ class crudRepository{
    constructor(model){
       this.model=model
    }
+   
     async create(data){
       const create= await this.model.create(data);
       return create
@@ -26,6 +27,46 @@ class crudRepository{
          throw error
       }
     }
+
+    async delete(id){
+      try{
+         const actualId=id.id;
+         const response =await this.model.deleteOne({
+         "_id":actualId
+      })
+         return response
+
+      }catch(error){
+         console.log(error);
+         throw error
+      }
+    }
+
+    async findByName(text)
+    {
+        try {
+             let hashtag = await this.model.find({
+                text:text
+             });
+             return hashtag;
+        }
+        catch(error) {
+            console.log(error);
+            throw error;
+        }
+    }
+
+    async bulkCreate (data) {
+      try{
+           const tags = await this.model.insertMany(data);
+           return tags;
+      }
+      catch(error) {
+          console.log(error);
+          throw error;
+      }
+  }
+
 }
 
 

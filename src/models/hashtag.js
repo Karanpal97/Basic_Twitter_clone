@@ -13,7 +13,6 @@ const hashtagSchema=new mongoose.Schema({
 ]
 })
 
-const HashTags=mongoose.model("hashtag",hashtagSchema)
+const HashTags=mongoose.model("Hashtag",hashtagSchema)
 
-module.exports=(HashTags)
-
+module.exports={HashTags}

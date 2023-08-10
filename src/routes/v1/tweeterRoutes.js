@@ -5,6 +5,7 @@ const router=express.Router();
 
 
 router.post("/",tweetController.createTweet)
+router.patch("/",tweetController.remove)
 
 
 

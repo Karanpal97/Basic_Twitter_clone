@@ -79,9 +79,36 @@ async function findTweet(req,res){
  }}
 
 
+ async function remove(req,res){
+
+    try{ 
+     const responce=await tweetService.remove({
+        id:req.body.id
+     })
+        SuccessResponce.data=responce
+   
+         return res
+         .status(StatusCodes.CREATED)
+         .json(
+              SuccessResponce
+          )
+     }  
+  catch(error){
+     ErrorResponce.error=error
+     console.log(error)
+         return res
+         .status(StatusCodes.BAD_REQUEST)
+         .json(
+             ErrorResponce
+         )
+         
+  }}
+
+
 
 module.exports={
    createTweet,
    findTweet,
-   findAllTweet
+   findAllTweet,
+   remove
 }

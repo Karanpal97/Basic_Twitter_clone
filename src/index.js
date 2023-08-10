@@ -2,7 +2,7 @@ const express=require("express");
 
 const {connect}=require("./config/databases")
 const {Tweet}=require("../src/models/tweeter")
-const {HashTags}=require("../src/models/hashtags")
+const {HashTags}=require("../src/models/hashtag")
 const apiRoute=require("./routes")
 
 
