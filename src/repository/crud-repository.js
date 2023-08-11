@@ -18,7 +18,8 @@ class crudRepository{
 
 
     async findAll(){
-      try{const responce=await this.model.find({})
+      try{
+         const responce=await this.model.find({})
      
       return responce
    }

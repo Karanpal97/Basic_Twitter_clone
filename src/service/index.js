@@ -1,4 +1,4 @@
 module.exports={
-   tweetService:require("./tweeter"),   
-   hashtagService:require("./hashtag")
+   tweetService:require("./tweeter"),
+   userService:require("./user"),
 }
