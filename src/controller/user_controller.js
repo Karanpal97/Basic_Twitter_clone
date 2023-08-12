@@ -29,4 +29,27 @@ catch(error){
        
 }}
 
-module.exports={ createUser}
+async function signIn(req,res){
+
+    try{ const responce=await userService.signIn({
+        email:req.body.email,
+        password:req.body.password,
+     })
+        SuccessResponce.data=responce
+         return res
+         .status(StatusCodes.CREATED)
+         .json(
+              SuccessResponce
+          )
+     }  
+  catch(error){
+     ErrorResponce.error=error
+         return res
+         .status(StatusCodes.BAD_REQUEST)
+         .json(
+             ErrorResponce
+         )
+         
+  }}
+
+module.exports={ createUser,signIn}

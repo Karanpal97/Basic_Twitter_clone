@@ -4,7 +4,8 @@ const { userController}=require("../../controller")
 const router=express.Router();
 
 
-router.post("/",userController.createUser)
+router.post("/signUp",userController.createUser)
+router.post("/signIn",userController.signIn)
 
 
 

@@ -7,7 +7,8 @@ const router=express.Router();
 
 
 router.use("/tweet",tweeterRoute)
-router.use("/signUp",userRoute)
+router.use("/user",userRoute)
+
 
 
 module.exports=router;

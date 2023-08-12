@@ -21,21 +21,4 @@ app.listen(4001,  async()=>{
            connect();
     console.log("connected ")
 
-    // Tweet.create({ 
-    //  content:"this is my first tweet",
-    //  likes:25,
-    //  noOfRetweet:5
-    //  })
-
-    //  console.log("done")
-    
-   
-
-    // HashTags.create({
-    //     text:"snfnfmmfm,",
-    //     tweet:[ ]
-    //  })
-   
-
-
 })

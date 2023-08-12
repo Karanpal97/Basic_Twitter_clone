@@ -46,7 +46,7 @@ class crudRepository{
     async findByName(text)
     {
         try {
-             let hashtag = await this.model.find({
+             const hashtag = await this.model.find({
                 text:text
              });
              return hashtag;
