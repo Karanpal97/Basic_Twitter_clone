@@ -15,9 +15,9 @@ app.use('/api',apiRoute)
 
 
 
-app.listen(4001,  async()=>{
+app.listen(4002,  async()=>{
 
-        console.log("server is running at 4001")
+        console.log("server is running at 4002")
            connect();
     console.log("connected ")
 

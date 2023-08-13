@@ -5,14 +5,16 @@ const  tweetSchema=new mongoose.Schema({
    content:{
       type:String
    },
-   likes:{
-      type:Number
-   },
+   likes:[{
+      type:mongoose.Schema.Types.ObjectId,
+      ref:"Likes"
+   }],
    noOfRetweet:{
      type:Number
    },
-   Comment:{
-      type:ObjectId
+   Comments:{
+      type:ObjectId,
+      ref:"Comment"
    }
 })
 
